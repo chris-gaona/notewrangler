@@ -11,7 +11,8 @@
 
       .when('/notes', {
         templateUrl: 'assets/templates/notes/index.html',
-        controller: 'NotesIndexController'
+        controller: 'NotesIndexController',
+        controllerAs: 'allnotes'
       })
 
       .when('/notes/new', {

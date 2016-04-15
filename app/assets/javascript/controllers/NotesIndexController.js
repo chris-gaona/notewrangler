@@ -7,8 +7,7 @@
     var vm = this;
 
     vm.notes = Note.query();
-
-    console.log(vm.notes);
+    
   });
 
 })();
