@@ -1,1 +1,6 @@
-angular.module('NoteWrangler', ['ngRoute', 'ngResource']);
+(function() {
+  'use strict';
+
+  angular.module('NoteWrangler', ['ngRoute', 'ngResource']);
+
+})();

@@ -1,28 +1,32 @@
-angular.module('NoteWrangler')
+(function() {
+  'use strict';
 
-.config(function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      redirectTo: '/notes'
-    })
+  angular.module('NoteWrangler')
 
-    .when('/notes', {
-      templateUrl: 'assets/templates/notes/index.html',
-      controller: 'NotesIndexController'
-    })
+  .config(function($routeProvider) {
+    $routeProvider
+      .when('/', {
+        redirectTo: '/notes'
+      })
 
-    .when('/notes/new', {
-      templateUrl: 'assets/templates/notes/new.html',
-      controller: 'NotesCreateController'
-    })
+      .when('/notes', {
+        templateUrl: 'assets/templates/notes/index.html',
+        controller: 'NotesIndexController'
+      })
 
-    .when('/notes/:id', {
-      templateUrl: 'assets/templates/notes/show.html',
-      controller: 'NotesShowController'
-    })
+      .when('/notes/new', {
+        templateUrl: 'assets/templates/notes/new.html',
+        controller: 'NotesCreateController'
+      })
 
-    .when('/notes/:id/edit', {
-      templateUrl: 'assets/templates/notes/edit.html',
-      controller: 'NotesEditController'
-    })
-});
+      .when('/notes/:id', {
+        templateUrl: 'assets/templates/notes/show.html',
+        controller: 'NotesShowController'
+      })
+
+      .when('/notes/:id/edit', {
+        templateUrl: 'assets/templates/notes/edit.html',
+        controller: 'NotesEditController'
+      })
+  });
+})();
