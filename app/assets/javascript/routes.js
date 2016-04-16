@@ -12,7 +12,7 @@
       .when('/notes', {
         templateUrl: 'assets/templates/notes/index.html',
         controller: 'NotesIndexController',
-        controllerAs: 'allnotes'
+        controllerAs: 'allNotes'
       })
 
       .when('/notes/new', {
@@ -35,14 +35,14 @@
 
       .when('/users', {
         templateUrl: 'assets/templates/users/index.html',
-        controller: 'UsersIndexController',
-        controllerAs: 'userIndex'
+        controller: 'UserIndexController',
+        controllerAs: 'allUsers'
       })
 
       .when('/users/:id', {
         templateUrl: 'assets/templates/users/show.html',
-        controller: 'UsersShowController',
-        controllerAs: 'userShow'
+        controller: 'UserShowController',
+        controllerAs: 'showUser'
       })
   });
 })();
