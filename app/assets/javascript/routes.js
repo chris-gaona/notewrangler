@@ -17,17 +17,20 @@
 
       .when('/notes/new', {
         templateUrl: 'assets/templates/notes/new.html',
-        controller: 'NotesCreateController'
+        controller: 'NotesCreateController',
+        controllerAs: 'newNote'
       })
 
       .when('/notes/:id', {
         templateUrl: 'assets/templates/notes/show.html',
-        controller: 'NotesShowController'
+        controller: 'NotesShowController',
+        controllerAs: 'showNote'
       })
 
       .when('/notes/:id/edit', {
         templateUrl: 'assets/templates/notes/edit.html',
-        controller: 'NotesEditController'
+        controller: 'NotesEditController',
+        controllerAs: 'editNote'
       })
   });
 })();
