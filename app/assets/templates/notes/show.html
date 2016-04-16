@@ -10,4 +10,4 @@
 </p>
 
 <a ng-href="#/notes/{{showNote.note.id}}/edit" class="btn btn-default">Edit Note</a>
-<a ng-href="" class="btn btn-danger">Delete Note</a>
+<a ng-href="" ng-click="showNote.deleteNote(showNote.note)" class="btn btn-danger">Delete Note</a>
