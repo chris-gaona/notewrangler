@@ -3,10 +3,14 @@
 
   angular.module('NoteWrangler')
 
-  .controller('NotesEditController', function(Note, $routeParams, $location) {
+  .controller('NotesEditController', function(Note, Category, User, $routeParams, $location) {
     var vm = this;
 
     vm.note = Note.get({id: $routeParams.id});
+
+    vm.categories = Category.query();
+
+    vm.users = User.query();
 
     vm.isSubmitting = false;
 
