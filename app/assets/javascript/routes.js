@@ -32,5 +32,17 @@
         controller: 'NotesEditController',
         controllerAs: 'editNote'
       })
+
+      .when('/users', {
+        templateUrl: 'assets/templates/users/index.html',
+        controller: 'UsersIndexController',
+        controllerAs: 'userIndex'
+      })
+
+      .when('/users/:id', {
+        templateUrl: 'assets/templates/users/show.html',
+        controller: 'UsersShowController',
+        controllerAs: 'userShow'
+      })
   });
 })();

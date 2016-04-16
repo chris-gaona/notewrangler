@@ -8,8 +8,6 @@
 
     vm.note = Note.get({id: $routeParams.id});
 
-    console.log(vm.note);
-
     vm.isSubmitting = false;
 
     vm.saveNote = function(note) {
