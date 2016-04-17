@@ -1,9 +1,14 @@
 <h1>Notes</h1>
 
+<div class="form-group">
+  <!--.$ makes it so that you can search everything as a wildcard-->
+  Search: <input type="text" ng-model="search.input.$" />
+</div>
+
 <nw-category-selector ng-model="allNotes.search.category"></nw-category-selector>
 
 <div class="row">
-  <div ng-repeat="note in allNotes.notes | categoryFilter: allNotes.search.category" class="col-sm-6">
+  <div ng-repeat="note in allNotes.notes | categoryFilter: allNotes.search.category | filter: search.input" class="col-sm-6">
     <h2><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
     <p>
       {{note.description}}
