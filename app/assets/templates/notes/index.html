@@ -9,7 +9,7 @@
 
 <div class="row">
   <div ng-repeat="note in allNotes.notes | categoryFilter: allNotes.search.category | filter: search.input" class="col-sm-6">
-    <h2><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
+    <h2><a title="{{note.user.name}}" ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
     <p>
       {{note.description}}
     </p>
